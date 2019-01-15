@@ -21,6 +21,9 @@ const getDistance = (str1, str2, maxlen, opts) => (
   maxlen - leven(getStr(str1, opts), getStr(str2, opts))) / maxlen
 
 module.exports = {
+  getStemmed,
+  getExcept,
+  getStr,
   getMaxLen,
   getDistance
 }
