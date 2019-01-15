@@ -1,0 +1,27 @@
+{
+  "name": "how-similar",
+  "version": "1.0.0",
+  "description": "Module to compare similarity between strings / arrays.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdacjs/how-similar.git"
+  },
+  "keywords": [
+    "similarity"
+  ],
+  "author": "Juan Convers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webdacjs/how-similar/issues"
+  },
+  "homepage": "https://github.com/webdacjs/how-similar#readme",
+  "dependencies": {
+    "leven": "^2.1.0",
+    "sort-objects-array": "^1.4.1",
+    "stemmer": "^1.0.3"
+  }
+}
