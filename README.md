@@ -35,7 +35,7 @@ The module provides functions to deal with string / string comparison and string
 
 Then as shown above you can pass two strings or an string and an array of strings. You can also pass a third parameter with options (it will be explained next).
 
-### Examples
+#### Examples
 
 The following use cases can be solved with the module:
 
