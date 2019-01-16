@@ -12,6 +12,11 @@
   },
   "keywords": [
     "similarity"
+    "compare",
+    "comparison",
+    "similar",
+    "string",
+    "levenshtein"
   ],
   "author": "Juan Convers",
   "license": "MIT",
@@ -23,5 +28,8 @@
     "leven": "^2.1.0",
     "sort-objects-array": "^1.4.1",
     "stemmer": "^1.0.3"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
   }
 }
