@@ -14,11 +14,13 @@ const getStr = (str, opts = {}) => {
   return str
 }
 
+const round = num => Math.round(num * Math.pow(10, 3)) / Math.pow(10, 3)
+
 const getMaxLen = (arr, opts) => soa(
   arr.map(x => ({k: x, len: getStr(x, opts).length})), 'len', 'desc')
 
-const getDistance = (str1, str2, maxlen, opts) => (
-  maxlen - leven(getStr(str1, opts), getStr(str2, opts))) / maxlen
+const getDistance = (str1, str2, maxlen, opts) => round((
+  maxlen - leven(getStr(str1, opts), getStr(str2, opts))) / maxlen)
 
 const checkStrings = (arg1, arg2) => (typeof (
   arg1) === 'string' && typeof (arg2) === 'string')
