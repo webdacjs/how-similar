@@ -3,7 +3,8 @@ const {
   getExcept,
   getStr,
   getMaxLen,
-  getDistance
+  getDistance,
+  checkArgs
 } = require('./utils.js')
 
 test('Testing stemmer function', () => {
@@ -33,4 +34,10 @@ test('Testing getStr functions', () => {
   expect(getStr(testStr)).toBe('This Is trying a Test')
   expect(getStr(testStr, {ignorecase: true})).toBe('this is trying a test')
   expect(getStr(testStr, {ignorecase: true, stem: true})).toBe('thi is try a test')
+})
+
+test('Testing checkArgs functions', () => {
+  expect(checkArgs('string1', 'string2')).toBe('string')
+  expect(checkArgs('string1', ['arrelem1', 'arrelem2'])).toBe('array')
+  expect(checkArgs('string1', {'arrelem1':1 })).toBe(undefined)
 })
