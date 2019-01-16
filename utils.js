@@ -20,10 +20,22 @@ const getMaxLen = (arr, opts) => soa(
 const getDistance = (str1, str2, maxlen, opts) => (
   maxlen - leven(getStr(str1, opts), getStr(str2, opts))) / maxlen
 
+const checkStrings = (arg1, arg2) => (typeof (
+  arg1) === 'string' && typeof (arg2) === 'string')
+
+const checkStringArray = (arg1, arg2) => (typeof (
+  arg1) === 'string' && Array.isArray(arg2))
+
+const checkArgs = (arg1, arg2) => checkStrings(
+  arg1, arg2) ? 'string' : checkStringArray(arg1, arg2) ? 'array' : undefined
+
 module.exports = {
   getStemmed,
   getExcept,
   getStr,
   getMaxLen,
-  getDistance
+  getDistance,
+  checkStrings,
+  checkStringArray,
+  checkArgs
 }
